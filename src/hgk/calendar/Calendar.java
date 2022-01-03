@@ -1,5 +1,7 @@
 package hgk.calendar;
 
+import java.util.Scanner;
+
 public class Calendar {
 	public static void main(String[] args) {
 		System.out.println("일 월 화 수 목 금 토");
@@ -9,6 +11,15 @@ public class Calendar {
 		System.out.println("15 16 17 18 19 20 21");
 		System.out.println("22 23 24 25 26 27 78");
 		
+		//숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램
+		//scanner 커서 올리고 ctrl + shift + m
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("달을 입력하세요");
+		int month = scanner.nextInt();
+		
+		int[] maxDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		
+		System.out.println(month + "월은 " + maxDays[month - 1] + "일까지 있습니다");
+		scanner.close();
 	}
-
 }

@@ -24,10 +24,16 @@ public class Calendar {
 		// scanner 커서 올리고 ctrl + shift + m
 		Scanner scanner = new Scanner(System.in);
 		Calendar cal = new Calendar();
-		System.out.println("달을 입력하세요");
-		int month = scanner.nextInt();
-
-		System.out.println(month + "월은 " + cal.getMaxDaysOfMonth(month) + "일");
+		System.out.println("반복 횟수를 입력하세요 : ");
+		int num = scanner.nextInt();
+		int i = 0;
+		while(i < num) {
+			System.out.println("달을 입력하세요");
+			int month = scanner.nextInt();
+			System.out.println(month + "월은 " + cal.getMaxDaysOfMonth(month) + "일");
+			i++;
+		}
 		scanner.close();
+		System.out.println("반복 종료");
 	}
 }
